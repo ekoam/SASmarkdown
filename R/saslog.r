@@ -18,9 +18,9 @@ saslog <- function (options) {
   }
   
   if (is.list(options$engine.opts)) {
-      code = paste(code, options$engine.opts[[options$engine]])
+      code = paste(options$engine.opts[[options$engine]], code)
   } else { # backwards compatability
-      code = paste(code, options$engine.opts)
+      code = paste(options$engine.opts, code)
   }
   if (is.list(options$engine.path)) {
       cmd = options$engine.path[[options$engine]]
